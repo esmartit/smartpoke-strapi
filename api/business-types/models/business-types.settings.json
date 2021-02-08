@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spbusinesstype",
+  "info": {
+    "name": "business types",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "spots": {
+      "via": "businessType",
+      "collection": "spots"
+    }
+  }
+}

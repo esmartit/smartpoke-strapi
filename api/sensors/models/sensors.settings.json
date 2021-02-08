@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spsensor",
+  "info": {
+    "name": "sensors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sensorId": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50
+    },
+    "location": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "zone": {
+      "via": "sensors",
+      "model": "zones"
+    },
+    "pwrIn": {
+      "type": "integer"
+    },
+    "pwrLimit": {
+      "type": "integer"
+    },
+    "pwrOut": {
+      "type": "integer"
+    },
+    "spot": {
+      "model": "spots",
+      "via": "sensors"
+    },
+    "apMac": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "serialNumber": {
+      "type": "string",
+      "unique": true
+    },
+    "tags": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

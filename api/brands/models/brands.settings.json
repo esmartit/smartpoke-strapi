@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spbrand",
+  "info": {
+    "name": "brands",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

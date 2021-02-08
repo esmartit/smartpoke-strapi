@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spzicode",
+  "info": {
+    "name": "zipcodes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "zipCode": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "city": {
+      "model": "cities",
+      "via": "zipcodes"
+    },
+    "spots": {
+      "collection": "spots",
+      "via": "zipcode"
+    }
+  }
+}

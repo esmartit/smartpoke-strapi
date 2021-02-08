@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spspot",
+  "info": {
+    "name": "spots",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "spotId": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "businessType": {
+      "model": "business-types",
+      "via": "spots"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "country": {
+      "via": "spots",
+      "model": "countries"
+    },
+    "state": {
+      "via": "spots",
+      "model": "states"
+    },
+    "city": {
+      "model": "cities",
+      "via": "spots"
+    },
+    "zipcode": {
+      "via": "spots",
+      "model": "zipcodes"
+    },
+    "zones": {
+      "via": "spot",
+      "collection": "zones"
+    },
+    "sensors": {
+      "via": "spot",
+      "collection": "sensors"
+    },
+    "hotspots": {
+      "via": "spot",
+      "collection": "hotspots"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spcountry",
+  "info": {
+    "name": "countries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "codeISO2": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 2,
+      "minLength": 2
+    },
+    "codeISO3": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 3,
+      "minLength": 3
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "codePhone": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "status": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "states": {
+      "via": "country",
+      "collection": "states"
+    },
+    "spots": {
+      "collection": "spots",
+      "via": "country"
+    }
+  }
+}

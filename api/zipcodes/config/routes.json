@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zipcodes",
+      "handler": "zipcodes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zipcodes/count",
+      "handler": "zipcodes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zipcodes/:id",
+      "handler": "zipcodes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zipcodes",
+      "handler": "zipcodes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zipcodes/:id",
+      "handler": "zipcodes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zipcodes/:id",
+      "handler": "zipcodes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spcustomer",
+  "info": {
+    "name": "customers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "mobilePhone": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Female",
+        "Male",
+        "Others"
+      ]
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "membership": {
+      "type": "boolean",
+      "default": false
+    },
+    "communication": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "birthDate": {
+      "type": "date",
+      "required": false,
+      "default": "1900-01-01T00:14:44.000Z"
+    },
+    "hotspot": {
+      "model": "hotspots",
+      "via": "customers"
+    }
+  }
+}

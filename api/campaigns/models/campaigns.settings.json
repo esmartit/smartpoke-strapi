@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spcampaign",
+  "info": {
+    "name": "campaigns",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "validDate": {
+      "type": "date",
+      "required": true
+    },
+    "smsEmail": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "message": {
+      "type": "richtext",
+      "required": true
+    },
+    "deferred": {
+      "type": "boolean",
+      "default": false
+    },
+    "deferredDate": {
+      "type": "date",
+      "default": "1900-01-01T00:14:44.000Z"
+    },
+    "percent": {
+      "type": "float",
+      "default": 0
+    },
+    "valueIn": {
+      "type": "integer",
+      "default": 0
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

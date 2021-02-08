@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spcity",
+  "info": {
+    "name": "cities",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cityCode": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "via": "cities",
+      "model": "states"
+    },
+    "zipcodes": {
+      "via": "city",
+      "collection": "zipcodes"
+    },
+    "spots": {
+      "via": "city",
+      "collection": "spots"
+    }
+  }
+}

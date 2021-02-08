@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spdevice",
+  "info": {
+    "name": "devices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "device": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    }
+  }
+}
