@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spmessage",
+  "info": {
+    "name": "messages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "device": {
+      "type": "string",
+      "maxLength": 17
+    },
+    "sentDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "userName": {
+      "type": "string"
+    },
+    "campaign": {
+      "model": "campaigns",
+      "via": "messages"
+    },
+    "status": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
