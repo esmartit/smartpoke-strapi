@@ -33,8 +33,7 @@
       "default": false
     },
     "deferredDate": {
-      "type": "date",
-      "default": "1900-01-01T00:14:44.000Z"
+      "type": "datetime"
     },
     "percent": {
       "type": "float",
@@ -47,6 +46,10 @@
     "type": {
       "type": "string",
       "required": true
+    },
+    "messages": {
+      "via": "campaign",
+      "collection": "messages"
     }
   }
 }
